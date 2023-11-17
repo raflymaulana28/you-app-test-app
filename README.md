@@ -1,6 +1,6 @@
 ## You App Test App
 
-Welcome to the You App Test App! This application is built with Next.js 13, Tailwind CSS, Axios, and TypeScript. It is based on the boilerplate provided by Theodorus Clarence - [Next.js + Tailwind CSS + TypeScript Starter and Boilerplate](https://github.com/theodorusclarence/nextjs-tailwindcss-typescript-starter).
+Welcome to the You App Test App! This application is built with Next.js 13, Tailwind CSS, Axios, and TypeScript. It is based on the boilerplate provided by Theodorus Clarence - [Next.js + Tailwind CSS + TypeScript Starter and Boilerplate](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter).
 
 ### Features
 
@@ -35,7 +35,7 @@ Welcome to the You App Test App! This application is built with Next.js 13, Tail
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/theodorusclarence/nextjs-tailwindcss-typescript-starter.git your-you-app
+   git clone https://github.com/raflymaulana28/you-app-test-app.git
    ```
 
 2. Change into the project directory:
