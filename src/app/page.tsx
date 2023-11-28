@@ -22,18 +22,24 @@ function HomePage() {
   const router = useRouter();
 
   const fetchAPI = async () => {
-    const tokenSession = window.localStorage.getItem('token_session');
-    if (!tokenSession) {
-      router.push('/login');
-      return;
-    }
-    const profiles = await getProfile();
-    if (profiles.status === 500) {
+    try {
+      const tokenSession = window.localStorage.getItem('token_session');
+      if (!tokenSession) {
+        router.push('/login');
+        return;
+      }
+      const profiles = (await getProfile()) as any;
+      if (profiles?.status !== 200) {
+        router.push('/login');
+        window.localStorage.clear();
+        return;
+      }
+      setProfile(profiles?.data?.data);
+    } catch (err) {
       router.push('/login');
       window.localStorage.clear();
       return;
     }
-    setProfile(profiles?.data?.data);
   };
   React.useEffect(() => {
     fetchAPI();
